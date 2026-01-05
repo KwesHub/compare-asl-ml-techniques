@@ -1,0 +1,5 @@
+Classifier,Train Accuracy,Test Accuracy
+Decision Tree,0.9987915407854985,0.9345156889495225
+kNN (from scratch),1.0,0.9508867667121419
+kNN (sklearn),1.0,0.9508867667121419
+Random Forest,1.0,0.9577080491132333

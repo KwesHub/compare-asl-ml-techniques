@@ -1,0 +1,3 @@
+Method,Silhouette Score,Adjusted Rand Index
+K-Means,0.20886845510952481,0.29902771111313076
+Hierarchical (Ward),0.1832320660666396,0.29106697673096826
