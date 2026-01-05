@@ -1,0 +1,162 @@
+# ASL Hand Pose Recognition Project - Complete Harvard References
+
+## Academic Papers
+
+Chawla, N.V., Bowyer, K.W., Hall, L.O. and Kegelmeyer, W.P. (2002) 'SMOTE: Synthetic Minority Over-sampling Technique', *Journal of Artificial Intelligence Research*, 16, pp. 321-357. Available at: https://doi.org/10.1613/jair.953 (Accessed: 10 December 2024).
+
+Zhang, F., Bazarevsky, V., Vakunov, A., Tkachenka, A., Sung, G., Chang, C.L. and Grundmann, M. (2020) 'MediaPipe Hands: On-device Real-time Hand Tracking', *arXiv preprint*. Available at: https://arxiv.org/abs/2006.10214 (Accessed: 10 December 2024).
+
+
+## Software Documentation
+
+### MediaPipe
+
+Google (2024) 'Hand landmarks detection guide', *MediaPipe Solutions Documentation*. Available at: https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker (Accessed: 10 December 2024).
+
+Google (2024) 'MediaPipe Solutions', *Google AI for Developers*. Available at: https://ai.google.dev/edge/mediapipe/solutions/guide (Accessed: 10 December 2024).
+
+RGB conversion 
+https://medium.com/the-digit/unveiling-the-art-of-opencv-and-mediapipe-project-polygonboundary-456824dc1dc4
+
+Static image mode
+https://mediapipe.readthedocs.io/en/latest/solutions/hands.html#static_image_mode
+
+hand landmarks
+https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker
+
+### Scikit-learn
+
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M. and Duchesnay, E. (2011) 'Scikit-learn: Machine Learning in Python', *Journal of Machine Learning Research*, 12, pp. 2825-2830. Available at: https://jmlr.csail.mit.edu/papers/v12/pedregosa11a.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'Scikit-learn: Machine Learning in Python', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/ (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.preprocessing.StandardScaler', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.model_selection.train_test_split', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'Preprocessing data', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/preprocessing.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'Clustering', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/clustering.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'Common pitfalls and recommended practices', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/common_pitfalls.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.ensemble.RandomForestClassifier', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.tree.DecisionTreeClassifier', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.neighbors.KNeighborsClassifier', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.cluster.KMeans', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.cluster.AgglomerativeClustering', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.metrics.silhouette_score', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.metrics.adjusted_rand_score', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.adjusted_rand_score.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.model_selection.GridSearchCV', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html (Accessed: 10 December 2024).
+
+Scikit-learn Developers (2024) 'sklearn.model_selection.StratifiedKFold', *Scikit-learn Documentation*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html (Accessed: 10 December 2024).
+
+
+### Imbalanced-learn (SMOTE)
+
+Lemaître, G., Nogueira, F. and Aridas, C.K. (2017) 'Imbalanced-learn: A Python Toolbox to Tackle the Curse of Imbalanced Datasets in Machine Learning', *Journal of Machine Learning Research*, 18(17), pp. 1-5. Available at: https://jmlr.org/papers/v18/16-365.html (Accessed: 10 December 2024).
+
+Imbalanced-learn Developers (2024) 'SMOTE', *Imbalanced-learn Documentation*. Available at: https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html (Accessed: 10 December 2024).
+
+K nearest neighbour justification
+https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/
+
+
+### NumPy
+
+Harris, C.R., Millman, K.J., van der Walt, S.J., Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N.J., Kern, R., Picus, M., Hoyer, S., van Kerkwijk, M.H., Brett, M., Haldane, A., del Río, J.F., Wiebe, M., Peterson, P., Gérard-Marchant, P., Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke, C. and Oliphant, T.E. (2020) 'Array programming with NumPy', *Nature*, 585, pp. 357-362. Available at: https://doi.org/10.1038/s41586-020-2649-2 (Accessed: 10 December 2024).
+
+NumPy Developers (2024) 'NumPy Documentation', *NumPy*. Available at: https://numpy.org/doc/stable/ (Accessed: 10 December 2024).
+
+
+### Matplotlib
+
+Hunter, J.D. (2007) 'Matplotlib: A 2D Graphics Environment', *Computing in Science & Engineering*, 9(3), pp. 90-95. Available at: https://doi.org/10.1109/MCSE.2007.55 (Accessed: 10 December 2024).
+
+Matplotlib Developers (2024) 'Matplotlib Documentation', *Matplotlib*. Available at: https://matplotlib.org/stable/contents.html (Accessed: 10 December 2024).
+
+Matplotlib Developers (2024) 'matplotlib.pyplot', *Matplotlib Documentation*. Available at: https://matplotlib.org/stable/api/pyplot_summary.html (Accessed: 10 December 2024).
+
+Matplotlib Developers (2024) 'matplotlib.patches', *Matplotlib Documentation*. Available at: https://matplotlib.org/stable/api/patches_api.html (Accessed: 10 December 2024).
+
+
+### Seaborn
+
+Waskom, M.L. (2021) 'seaborn: statistical data visualization', *Journal of Open Source Software*, 6(60), p. 3021. Available at: https://doi.org/10.21105/joss.03021 (Accessed: 10 December 2024).
+
+Seaborn Developers (2024) 'Seaborn Documentation', *Seaborn*. Available at: https://seaborn.pydata.org/ (Accessed: 10 December 2024).
+
+
+### SciPy
+
+Virtanen, P., Gommers, R., Oliphant, T.E., Haberland, M., Reddy, T., Cournapeau, D., Burovski, E., Peterson, P., Weckesser, W., Bright, J., van der Walt, S.J., Brett, M., Wilson, J., Millman, K.J., Mayorov, N., Nelson, A.R.J., Jones, E., Kern, R., Larson, E., Carey, C.J., Polat, İ., Feng, Y., Moore, E.W., VanderPlas, J., Laxalde, D., Perktold, J., Cimrman, R., Henriksen, I., Quintero, E.A., Harris, C.R., Archibald, A.M., Ribeiro, A.H., Pedregosa, F., van Mulbregt, P. and SciPy 1.0 Contributors (2020) 'SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python', *Nature Methods*, 17, pp. 261-272. Available at: https://doi.org/10.1038/s41592-019-0686-2 (Accessed: 10 December 2024).
+
+SciPy Developers (2024) 'scipy.cluster.hierarchy', *SciPy Documentation*. Available at: https://docs.scipy.org/doc/scipy/reference/cluster.hierarchy.html (Accessed: 10 December 2024).
+
+
+### Python Standard Library
+
+Python Software Foundation (2024) 'os — Miscellaneous operating system interfaces', *Python 3.12 Documentation*. Available at: https://docs.python.org/3/library/os.html (Accessed: 10 December 2024).
+
+Python Software Foundation (2024) 'math — Mathematical functions', *Python 3.12 Documentation*. Available at: https://docs.python.org/3/library/math.html (Accessed: 10 December 2024).
+
+Python Software Foundation (2024) 'csv — CSV File Reading and Writing', *Python 3.12 Documentation*. Available at: https://docs.python.org/3/library/csv.html (Accessed: 10 December 2024).
+
+Python Software Foundation (2024) 'collections — Container datatypes', *Python 3.12 Documentation*. Available at: https://docs.python.org/3/library/collections.html (Accessed: 10 December 2024).
+
+Python Software Foundation (2024) 'random — Generate pseudo-random numbers', *Python 3.12 Documentation*. Available at: https://docs.python.org/3/library/random.html (Accessed: 10 December 2024).
+
+
+### Pandas
+
+The pandas development team (2024) 'pandas documentation', *pandas*. Available at: https://pandas.pydata.org/docs/ (Accessed: 10 December 2024).
+
+McKinney, W. (2010) 'Data Structures for Statistical Computing in Python', *Proceedings of the 9th Python in Science Conference*, pp. 56-61. Available at: https://doi.org/10.25080/Majora-92bf1922-00a (Accessed: 10 December 2024).
+
+Dropping missing values
+ https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html
+
+Removing duplicates
+ https://medium.com/@aniketbakre1291/removing-duplicates-from-datasets-keeping-the-first-or-last-row-2a97da12dd6b
+
+
+
+
+## Tutorials and Educational Resources
+
+HSF Training (2024) 'Data Preprocessing', *HSF Training Machine Learning*. Available at: https://hsf-training.github.io/hsf-training-ml-webpage/07-Data_Preprocessing/index.html (Accessed: 10 December 2024).
+
+DigitalOcean (2024) 'StandardScaler Function in Python', *DigitalOcean Community Tutorials*. Available at: https://www.digitalocean.com/community/tutorials/standardscaler-function-in-python (Accessed: 10 December 2024).
+
+Gholamy, Afshin; Kreinovich, Vladik; and Kosheleva, Olga, "Why 70/30 or 80/20 Relation Between Training
+and Testing Sets: A Pedagogical Explanation" (2018). Departmental Technical Reports (CS). 1209.
+https://scholarworks.utep.edu/cs_techrep/1209
+
+
+# Random references for the data pre-processing:
+
+Scikit-learn pre-processing: https://scikit-learn.org/stable/modules/preprocessing.html
+Imbalanced-learn: https://imbalanced-learn.org/stable/
+Train/test split: https://scikit-learn.org/stable/modules/cross_validation.html
+Pandas documentation: https://pandas.pydata.org/docs/
+
+# CONDENSED REFERENCE LIST FOR POSTER (Select 5-8 key references)
+
+## Recommended for Poster:
+
+Chawla, N.V., Bowyer, K.W., Hall, L.O. and Kegelmeyer, W.P. (2002) 'SMOTE: Synthetic Minority Over-sampling Technique', *Journal of Artificial Intelligence Research*, 16, pp. 321-357. Available at: https://doi.org/10.1613/jair.953 (Accessed: 10 December 2024).
+
+Google (2024) 'Hand landmarks detection guide', *MediaPipe Solutions Documentation*. Available at: https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker (Accessed: 10 December 2024).
+
+Pedregosa, F. et al. (2011) 'Scikit-learn: Machine Learning in Python', *Journal of Machine Learning Research*, 12, pp. 2825-2830. Available at: https://jmlr.csail.mit.edu/papers/v12/pedregosa11a.html (Accessed: 10 December 2024).
+
+Zhang, F. et al. (2020) 'MediaPipe Hands: On-device Real-time Hand Tracking', *arXiv preprint*. Available at: https://arxiv.org/abs/2006.10214 (Accessed: 10 December 2024).
+
+
