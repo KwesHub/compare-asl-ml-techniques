@@ -1,0 +1,69 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run ALL pipeline",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["--all"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Check dependencies",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["--check"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Feature extraction (Step 1)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/01_feature_extraction.py",
+      "args": ["--extract"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Preprocess with SMOTE (Step 2)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/02_data_preprocessing.py",
+      "args": ["--preprocess"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "kNN from scratch (Step 3)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/03_knn_from_scratch.py",
+      "args": ["--knn"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Supervised learning (Step 4)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/04_supervised_learning.py",
+      "args": ["--supervised"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Unsupervised learning (Step 5)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/05_unsupervised_learning.py",
+      "args": ["--unsupervised"],
+      "console": "integratedTerminal"
+    }
+    {
+      "name": "Unsupervised learning (Step 5)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/06_visualisation.py",
+      "args": ["--visualise"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
