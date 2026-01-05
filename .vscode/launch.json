@@ -21,7 +21,7 @@
       "name": "Feature extraction (Step 1)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/01_feature_extraction.py",
+      "program": "${workspaceFolder}/main.py",
       "args": ["--extract"],
       "console": "integratedTerminal"
     },
@@ -29,7 +29,7 @@
       "name": "Preprocess with SMOTE (Step 2)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/02_data_preprocessing.py",
+      "program": "${workspaceFolder}/main.py",
       "args": ["--preprocess"],
       "console": "integratedTerminal"
     },
@@ -37,7 +37,7 @@
       "name": "kNN from scratch (Step 3)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/03_knn_from_scratch.py",
+      "program": "${workspaceFolder}/main.py",
       "args": ["--knn"],
       "console": "integratedTerminal"
     },
@@ -45,7 +45,7 @@
       "name": "Supervised learning (Step 4)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/04_supervised_learning.py",
+      "program": "${workspaceFolder}/main.py",
       "args": ["--supervised"],
       "console": "integratedTerminal"
     },
@@ -53,7 +53,7 @@
       "name": "Unsupervised learning (Step 5)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/05_unsupervised_learning.py",
+      "program": "${workspaceFolder}/main.py",
       "args": ["--unsupervised"],
       "console": "integratedTerminal"
     },
@@ -61,7 +61,7 @@
       "name": "Unsupervised learning (Step 5)",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/06_visualisation.py",
+      "program": "${workspaceFolder}/main.py",
       "args": ["--visualise"],
       "console": "integratedTerminal"
     }
