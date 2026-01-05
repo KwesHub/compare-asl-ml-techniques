@@ -56,7 +56,7 @@
       "program": "${workspaceFolder}/05_unsupervised_learning.py",
       "args": ["--unsupervised"],
       "console": "integratedTerminal"
-    }
+    },
     {
       "name": "Unsupervised learning (Step 5)",
       "type": "debugpy",
