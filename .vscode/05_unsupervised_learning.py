@@ -9,26 +9,87 @@ Author:     [Group A108]
 
 COURSEWORK PART 2d: Unsupervised Learning - Clustering Data
 
-This script applies clustering algorithms to the ASL hand pose data:
-    1. K-Means clustering
-    2. Hierarchical (Agglomerative) clustering
+This script applies clustering algorithms to the ASL hand pose data WITHOUT
+using the class labels. Our goal is to discover natural groupings in the data
+and compare them with the actual ASL letter classes. this involves 2D representation and elbow and silhouette
+for optimal clusters k finding the optimal "elbow" k value.
+
+WHAT THIS SCRIPT DOES:
+    1. Loads feature data (removing class labels for true unsupervised learning)
+    2. Determines optimal number of clusters using Elbow and Silhouette methods
+    https://www.youtube.com/watch?v=6X15aLmMCcg
+    3. Applies K-Means clustering
+    4. Applies Hierarchical (Agglomerative) clustering
+    https://medium.com/@khalidassalafy/agglomerative-hierarchical-clustering-a-study-and-implementation-in-python-fddfdb6a7a64
+    5. Compares cluster assignments with actual labels (external validation)
+    6. Creates visualisations using PCA for 2D representation
+    https://awesomeneuron.substack.com/p/pca-a-visual-journey-through-dimensionality
 
 WHAT IS UNSUPERVISED LEARNING?
-    Unlike supervised learning, we don't use the class labels!
-    Instead, we let the algorithm find natural groupings (clusters)
-    in the data based on similarity.
+    Unlike supervised learning (where we have labels), unsupervised learning
+    finds patterns in data without any guidance:
 
-WHAT WE DO:
-    1. Remove class labels from the data
-    2. Apply K-Means clustering
-    3. Apply Hierarchical clustering
-    4. Compare cluster assignments with actual labels
-    5. Analyse how well clustering captures the true classes
+    Supervised:   "Here are hand images, and these are letters A-J"
+                  Model learns: image features -> letter
+
+    Unsupervised: "Here are hand images, find natural groupings"
+                  Model discovers: similar images cluster together
+
+    The key question: Do natural clusters correspond to ASL letters?
+    If clusters match letters well, it suggests ASL gestures have
+    distinctive, separable features.
+
+CLUSTERING ALGORITHMS:
+
+    1. K-Means:
+       - Partitions data into k clusters by minimising within-cluster variance
+       - Fast and scalable (O(nkt) where n=samples, k=clusters, t=iterations)
+       - Requires specifying k in advance
+       - Assumes spherical clusters of similar size
+       Reference: https://www.geeksforgeeks.org/k-means-clustering-introduction/
+       Reference: https://www.ibm.com/think/topics/k-means-clustering
+
+    2. Hierarchical (Agglomerative) Clustering:
+       - Builds a tree of clusters from bottom-up
+       - Starts with each point as its own cluster
+       - Merges closest clusters iteratively
+       - Ward linkage minimises variance increase on merge
+       - No need to specify k in advance (can cut tree at any level)
+       Reference: https://www.geeksforgeeks.org/hierarchical-clustering/
+       Reference: https://www.ibm.com/think/topics/hierarchical-clustering
+
+EVALUATION METRICS:
+
+    Silhouette Score:
+        - Measures how similar points are to their own cluster vs other clusters
+        - Range: [-1, 1], higher is better
+        - +1: Points are well-matched to cluster, far from neighbours
+        - 0: Points are on boundary between clusters
+        - -1: Points may be in wrong cluster
+        Reference: https://scikit-learn.org/stable/modules/clustering.html
+
+    Adjusted Rand Index (ARI):
+        - Measures agreement between cluster assignments and true labels
+        - Range: [-1, 1], where 1 = perfect match
+        - Adjusted for chance (random clustering ≈ 0)
+        - Only meaningful when true labels are available (external validation)
+        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.adjusted_rand_score.html
+
+VISUALISATION:
+    We use PCA (Principal Component Analysis) to reduce 63 dimensions to 2
+    for visualisation. PCA finds directions of maximum variance:
+        - PC1: Direction capturing most variance in the data
+        - PC2: Direction capturing second-most variance (orthogonal to PC1)
+
+    This allows us to plot clusters in 2D while preserving as much
+    structure as possible.
+    Reference: https://www.geeksforgeeks.org/machine-learning/reduce-data-dimentionality-using-pca-python/
 
 LEARNING RESOURCES:
-    - K-Means: https://www.geeksforgeeks.org/k-means-clustering-introduction/
-    - Hierarchical: https://www.geeksforgeeks.org/hierarchical-clustering/
+    - K-Means: https://www.ibm.com/think/topics/k-means-clustering
+    - Hierarchical: https://www.ibm.com/think/topics/hierarchical-clustering
     - Silhouette Score: https://scikit-learn.org/stable/modules/clustering.html
+    - Ward Linkage: https://jbhender.github.io/Stats506/F18/GP/Group10.html
 
 ================================================================================
 """
@@ -86,6 +147,7 @@ def load_data():
     Returns:
         tuple: (X_all, y_labels, label_mapping)
     """
+    #Pipeline update
     print("\nLoading data...")
 
     # Load training and test sets
@@ -130,12 +192,13 @@ def elbow_method(X, k_range=K_RANGE):
     for different values of k. The "elbow" point where the curve bends
     suggests a good number of clusters.
 
-    Args:
+    Parameters:
         X: Feature data
         k_range: Range of k values to try
 
     Reference: https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/
     """
+    #Pipeline update
     print("\n" + "-" * 50)
     print("ELBOW METHOD")
     print("-" * 50)
@@ -179,7 +242,7 @@ def silhouette_analysis(X, k_range=K_RANGE):
         - Close to 0: Points are on boundary between clusters
         - Close to -1: Points may be in wrong cluster
 
-    Args:
+    Parameters:
         X: Feature data
         k_range: Range of k values to try
 
@@ -188,6 +251,7 @@ def silhouette_analysis(X, k_range=K_RANGE):
 
     Reference: https://www.geeksforgeeks.org/silhouette-algorithm-to-determine-the-optimal-value-of-k/
     """
+    #Pipeline update
     print("\n" + "-" * 50)
     print("SILHOUETTE ANALYSIS")
     print("-" * 50)
@@ -242,7 +306,7 @@ def perform_kmeans(X, y_true, n_clusters=10):
         3. Move centres to mean of assigned points
         4. Repeat until convergence
 
-    Args:
+    Parameters:
         X: Feature data
         y_true: True labels (for comparison only)
         n_clusters: Number of clusters
@@ -252,6 +316,7 @@ def perform_kmeans(X, y_true, n_clusters=10):
 
     Reference: https://www.ibm.com/think/topics/k-means-clustering
     """
+    #Pipeline update
     print("\n" + "-" * 50)
     print("K-MEANS CLUSTERING")
     print("-" * 50)
@@ -286,11 +351,11 @@ def perform_hierarchical(X, y_true, n_clusters=10):
         3. Stop when we have the desired number of clusters
 
     Linkage methods:
-        - 'ward': Minimises variance within clusters (usually best)
+        - 'ward': Minimises variance within clusters 
         - 'complete': Uses maximum distance between clusters
         - 'average': Uses average distance between clusters
 
-    Args:
+    Parameters:
         X: Feature data
         y_true: True labels (for comparison only)
         n_clusters: Number of clusters
@@ -302,6 +367,7 @@ def perform_hierarchical(X, y_true, n_clusters=10):
                https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html
                https://jbhender.github.io/Stats506/F18/GP/Group10.html
     """
+    #Pipeline update
     print("\n" + "-" * 50)
     print("HIERARCHICAL CLUSTERING")
     print("-" * 50)
@@ -333,7 +399,7 @@ def visualise_clusters_pca(X, cluster_labels, true_labels, title, filename):
     Since our data has 63 dimensions, we can't plot it directly.
     PCA reduces it to 2D while preserving as much variance as possible.
 
-    Args:
+    Parameters:
         X: Feature data
         cluster_labels: Assigned cluster labels
         true_labels: True class labels
@@ -387,10 +453,11 @@ def compare_methods(kmeans_metrics, hier_metrics):
     """
     Compare K-Means and Hierarchical clustering results.
 
-    Args:
+    Parameters:
         kmeans_metrics: Dict with K-Means metrics
         hier_metrics: Dict with Hierarchical metrics
     """
+    #Pipeline update
     print("\n" + "=" * 50)
     print("CLUSTERING COMPARISON")
     print("=" * 50)
@@ -441,6 +508,7 @@ def main():
     """
     Main function - runs our complete unsupervised learning pipeline.
     """
+    #Pipeline update
     print("=" * 60)
     print("UNSUPERVISED LEARNING - ASL Hand Pose Clustering")
     print("Part 2d: Clustering Data")
@@ -490,6 +558,7 @@ def main():
     # =========================================================================
     # Summary
     # =========================================================================
+    #Pipeline update comple
     print("\n" + "=" * 60)
     print("UNSUPERVISED LEARNING COMPLETE")
     print("=" * 60)

@@ -159,7 +159,7 @@ def extract_landmarks(image_path, detector):
 
     # Step 4: Check if a hand was found
     if results.multi_hand_landmarks is None:
-        # No hand detected - this counts as "noise" for clarification for the coursework
+        # No hand detected - we count this as "noise" for the coursework
         return None #so we can still keep a count
 
     # Step 5: Get the first hand's landmarks

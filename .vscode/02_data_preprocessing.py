@@ -260,6 +260,7 @@ def clean_data(df):
         2. Remove duplicate instance IDs (repeated entries)
         3. Keep only valid labels (A-J)
     """
+    #Pipeline update
     print("\n" + "-" * 50)
     print("DATA CLEANING")
     print("-" * 50)
@@ -527,10 +528,10 @@ def create_normalisation_verification_plot(df_before, df_after):
         if all_zero:
             ax.bar([0], [len(values)], width=0.1, color='forestgreen', alpha=0.7, edgecolor='black')
             ax.set_xlim(-0.5, 0.5)
-            ax.set_title(f'AFTER: {col}\n✓ ALL ZEROS', fontsize=11, fontweight='bold', color='green')
+            ax.set_title(f'AFTER: {col}\n ALL ZEROS', fontsize=11, fontweight='bold', color='green')
         else:
             ax.hist(values, bins=50, color='red', alpha=0.7, edgecolor='black')
-            ax.set_title(f'AFTER: {col}\n✗ NOT ZERO', fontsize=11, fontweight='bold', color='red')
+            ax.set_title(f'AFTER: {col}\n NOT ZERO', fontsize=11, fontweight='bold', color='red')
 
         ax.set_xlabel(f'{name} Value', fontsize=10)
         ax.set_ylabel('Frequency', fontsize=10)
@@ -839,7 +840,7 @@ def create_smote_comparison_plot(y_train_original, y_train_balanced, label_encod
     axes[1].set_title('Training Data AFTER SMOTE (Balanced)', fontsize=12)
     axes[1].set_ylim(0, max(counts_after) * 1.15)
 
-    plt.suptitle('SMOTE Class Balancing Effect\n(Chawla et al., 2002)', fontsize=13, fontweight='bold')
+    plt.suptitle('SMOTE Class Balancing Effect', fontsize=13, fontweight='bold')
     plt.tight_layout()
     plt.savefig(os.path.join(PLOTS_DIR, 'smote_comparison.png'), dpi=150)
     plt.close()
