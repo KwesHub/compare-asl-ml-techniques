@@ -19,21 +19,21 @@ The from-scratch kNN outperformed all baseline classifiers, built using only Pyt
 Raw Images → Feature Extraction → Preprocessing → Classification → Evaluation
 ```
 
-1. **Feature Extraction** (`01_feature_extraction.py`) — Extracts 63 geometric hand landmark features per image using MediaPipe
-2. **Preprocessing** (`02_data_preprocessing.py`) — Cleans data, applies SMOTE for class balancing, normalises features
-3. **kNN from Scratch** (`03_knn_from_scratch.py`) — Full kNN implementation using only Python standard library (`math`, `collections`, `csv`)
-4. **Supervised Learning** (`04_supervised_learning.py`) — Decision Tree, kNN, and Random Forest via scikit-learn for comparison
-5. **Unsupervised Learning** (`05_unsupervised_learning.py`) — K-Means and Hierarchical clustering
-6. **Visualisation** (`06_visualization.py`) — Confusion matrices, accuracy plots, clustering output
+1. **Feature Extraction** (`01_feature_extraction.py`)  Extracts 63 geometric hand landmark features per image using MediaPipe
+2. **Preprocessing** (`02_data_preprocessing.py`)  Cleans data, applies SMOTE for class balancing, normalises features
+3. **kNN from Scratch** (`03_knn_from_scratch.py`)  Full kNN implementation using only Python standard library (`math`, `collections`, `csv`)
+4. **Supervised Learning** (`04_supervised_learning.py`)  Decision Tree, kNN, and Random Forest via scikit-learn for comparison
+5. **Unsupervised Learning** (`05_unsupervised_learning.py`)  K-Means and Hierarchical clustering
+6. **Visualisation** (`06_visualization.py`)  Confusion matrices, accuracy plots, clustering output
 
 ## Tech Stack
 
 - **Python 3.9**
-- MediaPipe — hand landmark detection
-- OpenCV — image loading and processing
-- scikit-learn — baseline classifiers and evaluation metrics
-- imbalanced-learn — SMOTE oversampling
-- pandas, matplotlib, seaborn — data handling and visualisation
+- MediaPipe: hand landmark detection
+- OpenCV: image loading and processing
+- scikit-learn: baseline classifiers and evaluation metrics
+- imbalanced-learn: SMOTE oversampling
+- pandas, matplotlib, seaborn: data handling and visualisation
 
 ## Setup
 
